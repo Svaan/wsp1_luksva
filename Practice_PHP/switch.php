@@ -15,13 +15,13 @@
          </h1></div>
         <?php
         /*---------------------Switch----------------------*/
-        /*
-        Ett Switch vilkor fungerar som ett klassiskt if-vilkor,
-        om något är sant så körs en bit kod.
-        Ett Switch vilkor är användbart i situationer där du
-        har flera if/elseif/else vilkor som är beroende av
-        samma värde. Ett Switch vilkor gör även arbetet effektivt
-        och tydligt.
+
+        // Ett Switch vilkor fungerar som ett klassiskt if-vilkor,
+        // om något är sant så körs en bit kod.
+        // Ett Switch vilkor är användbart i situationer där du
+        // har flera if/elseif/else vilkor som är beroende av
+        // samma värde. Ett Switch vilkor gör även arbetet effektivt
+        // och tydligt.
 
         switch (2) {
             case 0:
@@ -36,19 +36,20 @@
             default:
                 echo "The value isn't 0, 1 or 2.";
         }
+        echo '<br>';
 
-        Ett Switch vilkor accepterar endast ett argument.
-        Default case är lite speciellt och kan jämföras med else,
-        med skillnaden att det inte måste finnas med.
-        Om Default finns med så körs den koden endast då
-        inget föregående case körs.
-        Man separerar varje Case med ett Break, skulle break
-        inte finnas med så hade all kod körts.
-        */
+        // Ett Switch vilkor accepterar endast ett argument.
+        // Default case är lite speciellt och kan jämföras med else,
+        // med skillnaden att det inte måste finnas med.
+        // Om Default finns med så körs den koden endast då
+        // inget föregående case körs.
+        // Man separerar varje Case med ett Break, skulle break
+        // inte finnas med så hade all kod körts.
+
 
         /*--------------------Övning 1--------------------*/
         /*---------------------Första---------------------*/
-        /*
+
         // Färdigställ Switch nedan så att det finns argument
         // för att frukt är gott om det är en banan och om Det
         // inte är en frukt så skrivs "Det där är ingen frukt" ut.
@@ -56,19 +57,20 @@
         $frukt = "banan";
 
         switch ($frukt) {
-            //Fyll i Case här
+            case $frukt:
+                echo 'Frukt är gott';
+                break;
+            default:
+                echo 'Det där är ingen frukt';
         }
+        echo '<br>';
 
         /*------------------------------------------------*/
         /*--------------------Övning 2--------------------*/
         /*---------------------Flera----------------------*/
-        /*
-        // Färdigställ Switch nedan så att det finns argument
-        // för att frukt är gott om det är en banan och om Det
-        // inte är en frukt så skrivs "Det där är ingen frukt" ut.
 
         // Färdigställ koden nedan.
-        i = 5;
+        $i = 5;
 
         switch ($i) {
             case 0:
@@ -79,10 +81,12 @@
             case 3:
             case 4:
             case 5:
-                echo '$i is somewhere between 1 and 5'
+                echo '$i is somewhere between 1 and 5';
+                break;
             case 6:
             case 7:
-                echo '$i is somewhere between'
+                echo '$i is somewhere between';
+                break;
             default:
                 echo "I don't know how much \$i is.";
         }
@@ -90,13 +94,13 @@
         /*------------------------------------------------*/
         /*--------------------Övning 3--------------------*/
         /*-------------------Endswitch--------------------*/
-        /*
+
         // Färdigställ Switch nedan så att det finns argument
         // för att frukt är gott om det är en banan och om Det
         // inte är en frukt så skrivs "Det där är ingen frukt" ut.
-
+/*
         // Färdigställ koden nedan.
-        i = 5;
+        $i = 5;
 
         switch ($i) {
             case 0:
@@ -107,10 +111,12 @@
             case 3:
             case 4:
             case 5:
-                echo '$i is somewhere between 1 and 5'
+                echo '$i is somewhere between 1 and 5';
+                break;
             case 6:
             case 7:
-                echo '$i is somewhere between'
+                echo '$i is somewhere between';
+                break;
             default:
                 echo "I don't know how much \$i is.";
         }

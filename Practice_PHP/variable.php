@@ -14,27 +14,29 @@
              ?>
          </h1></div>
          <?php
+         echo '<br>';
         // Kommentar en rad.
         /*
         Kommentar på flera rader.
         */
         /*--------------------Övning 1--------------------*/
-        /*$foo = "bar";
+        $foo = "bar";
         $bar = "Hej";
-        //echo $foo;
-
-        //echo $$foo;     // Skriver ut vadå? - Varför?
+        echo $foo;
+        echo '<br>';
+        echo $$foo;     // Skriver ut vadå? - Varför?
+        echo '<br>';
         /*------------------------------------------------*/
         /*--------------------Övning 2--------------------*/
         /*--------------------By Value--------------------*/
-        /*$foo = 1;
+        $foo = 1;
         echo $foo . '<br>';
         $bar = $foo;    // $bar får samma värde som $foo
         $bar = 2;
         echo $foo;      // $foo skriver ut värdet 1.
 
         /*------------------By Reference------------------*/
-        /*$foo = 1;
+        $foo = 1;
         echo $foo . '<br>';
         $bar =& $foo;       // $foo och $bar refererar till varandra, $bar pekar på samma minnesyta som $foo.
         $bar = 2;
@@ -43,14 +45,14 @@
         $foo = 3;
         echo $bar . '<br>'; // värde? - varför?
         /*------------------Info StdClass-----------------*/
-        /*$foo = new stdClass();        // $foo är nu ett objekt
+        $foo = new stdClass();        // $foo är nu ett objekt
         $foo->property = 1;             // objektet $foo får egenskapen "property", med värdet 1.
         $bar = $foo;                    // $bar tilldelas $foo by reference eftersom $foo är ett objekt.
 
         $bar->property = 2;
         echo $foo->property . '<br>';            // 2 - eftersom $foo är samma objekt som $bar.
 
-        /*$foo = new stdClass();
+        $foo = new stdClass();
         $foo->property = 1;
         $bar = clone $foo;              // $bar är nu en kopia av $foo
         $bar->property = 2;
@@ -59,10 +61,11 @@
         /*------------------------------------------------*/
         /*--------------------Övning 3--------------------*/
         /*-------------------Operatorer-------------------*/
-        /*echo "7 dvärgar" + "1 snövit";  // ?. PHP kan vanlig matematik.
+        echo "7 dvärgar" + "1 snövit";  // ?. PHP kan vanlig matematik.
+        echo '<br>';
 
         /*------------------------------------------------*/
-        /*$foo = 1;
+        $foo = 1;
         echo $foo++ . '<br>';    // ?
         echo ++$foo . '<br><br>';    // ?
 
@@ -75,7 +78,8 @@
         echo $baz;
 
         /*------------------------------------------------*/
-        /*echo "hej" + "san" . '<br>';
+        echo '<br>';
+        echo "hej" + "san" . '<br>';
         echo "hej" . "san";
 
         echo '<br>';
@@ -97,27 +101,27 @@
         echo true . " go gubbe". "\n";
 
         echo '<br>';
-        */
-        /*$foo = "tjo";
+
+        $foo = "tjo";
         $foo .= "san";
         echo $foo;
 
         echo '<br>';
-        */
-        /*
+
+
         if ( 2 != "2"){
             echo "true";
         }
         else {
             echo "false";
-        }*/
+        }
 
 
 
 
         /*--------------------Övning ?--------------------*/
-        //      0123456789  = förmodade index-siffror
-        /*$str1 = "Webbserver";
+        //     0123456789  = förmodade index-siffror
+        $str1 = "Webbserver";
 
         echo $str1[3];  // ?
         echo $str1[4];  // ?

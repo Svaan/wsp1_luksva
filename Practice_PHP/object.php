@@ -19,17 +19,17 @@
          <h5>FUNKTIONER ÄR BRA!</h5>
             <?php
             /*-------------------- First ---------------------*/
-            /*
+
             // Ett första enklare exempel där vi tänker oss att sidor på webben beskrivs.
             $webpage1 = new StdClass();         // Inbyggd klass i PHP.
             $webpage1->name = "PHP";
             $webpage1->url = "http://php.net/";
             $webpage1->rank = 5;
-            */
+
             // Vi har skapat oss ett objekt och gett det två dynamiska egenskaper.
             /*------------------------------------------------*/
             /*----------------- Skapa Klassen ----------------*/
-            /*
+
             // Det vore bättre att bygga en klass för webbsidor och lägga in egenskaperna när objekt skapas.
             // Vi börjar med att deklarera egenskaperna och ger klassen en konstruktor.
             // Konstruktor (Constructor) = Funktion som körs automatiskt när objekt skapas.
@@ -49,7 +49,7 @@
 
                 // Detta är konstruktorn, dess namn börjar med två _ (underscore)
                 // följt av ordet construct.
-                public function__construct($name, $url, $rank) {
+                public function __construct($name, $url, $rank) {
                     $this->name = $name;
                     $this->url  = $url;
                     $this->rank = $rank;
@@ -60,19 +60,19 @@
                     return "<a href=\"{$this->url}\"{$this->name}</a>";
                 }
             }
-            */
+
             /*------------------------------------------------*/
             /*---------------- Använda klassen ---------------*/
-            /*
+
             $php_net = new webpage("PHP", "http://php.net", 5);
             $example = new webpage("Exempel", "http://", 3);
 
             echo $php_net->name;                                    // "PHP"
             echo "<a href=\"{$example->url}\"{$example->name}</a>"; // Länk
-
+            
             // Förenklad print av länk
             echo $php_net->getLink();
-            */
+
             ?>
     </body>
 </html>
