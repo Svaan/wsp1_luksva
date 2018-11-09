@@ -17,20 +17,18 @@ $pdo = new PDO($dsn, $user, $password, $attr);
 
 if($pdo) {
     $model = array();
-    echo "<pre>";
     //Lade till "ORDER BY" efter Posts så den soterar efter tidigast från creation time.
-    foreach($pdo->query('SELECT * FROM Posts JOIN Users ORDER BY Creation_time ASC') as $row) {
+    foreach($pdo->query('SELECT Posts.ID AS ID, Slug, Headline, Username, Creation_time, Text AS Message FROM Posts JOIN Users ON Posts.User_ID = Users.ID ORDER BY Creation_time ASC') as $row) {
         $model += array(
             $row['ID'] => array(
                 'slug' => $row['Slug'],
                 'title' => $row['Headline'],
                 'author' => $row['Username'],
                 'date' => $row['Creation_time'],
-                'message' => $row['Text']
+                'message' => $row['Message']
             )
         );
     }
-    echo "</pre>";
 } else {
 print_r($pdo->errorInfo());
 }
